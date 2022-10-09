@@ -1,15 +1,10 @@
 const fizzBuzz = (number) => {
-  for (let i = 0; i < number; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      return "FizzBuzz";
-    }
-    if (i % 3 === 0) {
-      return "Fizz";
-    }
-    if (i % 5 === 0) {
-      return "Buzz";
-    }
-    return i;
-  }
-};
+  const isDivisableBy3 = number % 3 === 0;
+  const isDivisableBy5 = number % 5 === 0;
+
+isDivisableBy3 && isDivisableBy5 ? "FizzBuzz"
+    : isDivisableBy3 ? "Fizz"
+    : isDivisableBy5 ? "Buzz"
+    : number;
+}
 module.exports = fizzBuzz;
